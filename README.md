@@ -65,12 +65,12 @@ beating-pytorch/
 ```
 
 ## Example Commands to Run Code
-- Install deps: python -m pip install -r requirements.txt
-- Basic GPT-2 inference: python scripts/GPT2_124M_model_code.py --prompt "Hello from HPC" --max_new_tokens 50
-- Layer-level profiling (console report only): python -m scripts.GPT2_layer_profiler
-- CUDA/kernel profiling with Chrome trace (saves gpt2_detailed_trace.json): python -m scripts.Cuda_kernel_profiling
-- Stable Chrome trace run (saves gpt2_gpu_trace.json): python -m scripts.Stable_gpt2_chrome_trace
-- Notebook (if you prefer Jupyter): jupyter notebook scripts/HPML_final_project.ipynb (install jupyter first if missing).
+- Install deps: `python -m pip install -r requirements.txt`
+- Basic GPT-2 inference: `python GPT2_124M_model_code.py --prompt "Hello from HPC" --max_new_tokens 50`
+- Layer-level profiling (console report only): `python -m GPT2_layer_profiler`
+- CUDA/kernel profiling with Chrome trace (saves gpt2_detailed_trace.json): `python -m Cuda_kernel_profiling`
+- Stable Chrome trace run (saves `gpt2_gpu_trace.json`): `python -m Stable_gpt2_chrome_trace`
+- Notebook (run on colab): scripts/HPML_final_project.ipynb
 
 Notes: Hugging Face will download the GPT-2 weights the first time you run any script. Select T4 GPU from the runtime.
 
