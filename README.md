@@ -77,6 +77,14 @@ Notes: Hugging Face will download the GPT-2 weights the first time you run any s
 
 ## Results & Observations
 
+| Method                     | Average Inference Time           | Tokens/Second (avg) | % Reduction in Inference Time |
+|----------------------------|----------------------------------|---------------------|-------------------------------|
+| No optimizations (FP32)    | 1.3099 seconds (0.1762)          | 76.34               | NIL                           |
+| FP16                       | 1.2754 seconds (0.1357)          | 78.41               | 2.63%                         |
+| torch.compile (FP32)       | 0.9065 seconds (0.0309)          | 110.32              | 30.79%                        |
+| FP16 + torch.compile       | 0.4851 seconds (0.0664)          | 206.14              | 62.96%                        |
+
+
 ### GPT-2 Profiling Results
 
 | Layers                                                             | Breakdown % |
